@@ -13,8 +13,8 @@
     --texto: #101010;
     --texto-inverso: #ffffff;
 
-    --destaque: #aa0000;
-    --destaque-inverso: #ff4343;
+    --destaque: #e00606;
+    --destaque-inverso: #f45959;
 }
 
 body {
@@ -53,5 +53,132 @@ nav#menu a {
 nav#menu a:hover {
     color: var(--destaque);
     background-color: var(--destaque-inverso);
-    a
+}
+
+main {
+    margin: 15px;
+}
+
+section#ficha {
+    background-color: var(--fundo-card);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+section#ficha .foto-perfil {
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    outline: 5px solid var(--destaque);
+
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+section#ficha h1 {
+    margin-bottom: 15px;
+    color: var(--destaque);
+    font-size: 1.5em;
+}
+
+section#ficha div#social {
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    font-size: 1.8em;
+    margin-top: 18px;
+}
+
+section#ficha div#social a {
+    color: var(--destaque);
+}
+
+section#ficha div#social a:hover {
+    color: var(--destaque-inverso);
+}
+
+
+article#vidio {
+    background-color: var(--fundo-card);
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+ h2 {
+    color: var(--destaque);
+    margin-bottom: 15px;
+}
+
+div.vidio-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    aspect-ratio: 16/9;
+}div.vidio-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+article#skills {
+    background-color: var(--fundo-card);
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+article#skills h2 {
+    color: var(--destaque);
+}
+
+
+article#formacao {
+    background-color: var(--fundo-card);
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+
+article#formacao h2 {
+    color: var(--destaque);
+}
+
+
+article#projeto {
+    background-color: var(--fundo-card);
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+article#projeto h2 {
+    color: var(--destaque);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px){
+    
 }
