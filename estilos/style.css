@@ -234,15 +234,24 @@ article#formacao h3.titulacao {
    SEÇÃO PROJETOS
    ========================================== */
 
-article#projeto {
+article#projetos {
     background-color: var(--fundo-card);
     margin-top: 15px;
     padding: 15px;
     border-radius: 15px;
 }
 
-article#projeto h2 {
-    color: var(--destaque);
+article#projetos div#container-projeto {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+
+}
+
+article#projetos div.projeto {
+    background-color: var(--fundo-principal);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 
