@@ -214,12 +214,12 @@ article#formacao div.curso {
     padding: 10px;
     border-left: 4px solid var(--destaque);
 
-    transition: border-width .4s, border-color .4s;
+    transition: border-width .15s, border-color .15s;
 }
 
 article#formacao div.curso:hover {
-    border-left-width: 17px;
-    border-color: var(--destaque-inverso);
+    border-left: 15px solid var(--destaque-inverso);
+    transition: border-width .3s, border-color .3s;
 }
 
 article#formacao p.periodo {
@@ -234,13 +234,6 @@ article#formacao h3.titulacao {
    SEÇÃO PROJETOS
    ========================================== */
 
-article#projetos {
-    background-color: var(--fundo-card);
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 15px;
-}
-
 article#projetos div#container-projeto {
     display: flex;
     flex-direction: column-reverse;
@@ -248,11 +241,61 @@ article#projetos div#container-projeto {
 
 }
 
+article#projetos {
+    background-color: var(--fundo-card);
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 15px;
+}
+
 article#projetos div.projeto {
     background-color: var(--fundo-principal);
     border-radius: 10px;
     padding: 10px;
+    border-left: 5px solid var(--destaque-inverso);
+    transition: border-width .15s, border-color .15s;
 }
+
+article#projetos div.projeto:hover {
+    border-left: 15px solid var(--destaque);
+    transition: border-width .3s, border-color .3s;
+}
+
+article#projetos .foto {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    /* width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden; */
+}
+
+/* ==========================================
+   SEÇÃO FOOTER
+   ========================================== */
+
+footer {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px;
+   }
+
+   footer a {
+    text-decoration: none;
+    color: var(--texto-inverso);
+    font-weight: bold;
+   }
+
+   footer a:hover {
+    color: var(--destaque-inverso);
+   }
+
+
 
 
 
