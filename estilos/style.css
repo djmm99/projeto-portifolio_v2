@@ -234,6 +234,23 @@ article#formacao h3.titulacao {
    SEÇÃO PROJETOS
    ========================================== */
 
+article#projetos .foto {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    /* width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden; */
+}
+
+article#projetos .foto:hover {
+    filter: brightness(0.9);
+    opacity: 0.9;
+}
+
 article#projetos div#container-projeto {
     display: flex;
     flex-direction: column-reverse;
@@ -251,26 +268,17 @@ article#projetos {
 article#projetos div.projeto {
     background-color: var(--fundo-principal);
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
     border-left: 5px solid var(--destaque-inverso);
-    transition: border-width .15s, border-color .15s;
+    transition: border-left-width .15s, border-left-color .15s;
 }
 
 article#projetos div.projeto:hover {
-    border-left: 15px solid var(--destaque);
-    transition: border-width .3s, border-color .3s;
-}
+    padding-left: 5px;
+    border-left-width: 15px;
+    border-left-color: var(--destaque);
 
-article#projetos .foto {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 10px;
-    overflow: hidden;
-    /* width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    overflow: hidden; */
+    transition: border-left-width .3s ease, border-left-color .3s ease, padding-left .3s ease;
 }
 
 /* ==========================================
