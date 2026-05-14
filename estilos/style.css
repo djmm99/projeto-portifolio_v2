@@ -18,7 +18,7 @@
     --texto-inverso: #ffffff;
 
     --destaque: #c70700;
-    --destaque-inverso: #7F7979;
+    --destaque-inverso: #ff651e;
 }
 
 /* ==========================================
@@ -29,6 +29,16 @@ body {
     background-color:var(--fundo-principal);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5em;
+}
+body.escuro {
+    --fundo-principal: #3f3f3f;
+    --fundo-card: #2f2f2f;
+
+    --texto: #ffffff;
+    --texto-inverso: #252525;
+
+    --destaque: #c70700;
+    --destaque-inverso: #fd4949;
 }
 
 main {
@@ -47,12 +57,15 @@ header {
     display: flex;
     justify-content: flex-end;
     align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav#menu ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 25px;
 
 }
 
@@ -62,13 +75,17 @@ nav#menu a {
     text-decoration: none;
     font-size: 1.5em;
 
-    padding: 10px;
+    padding: 8px 6px;
     border-radius: 5px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav#menu a:hover {
     color: var(--destaque);
-    background-color: var(--destaque-inverso);
+    background-color: var(--fundo-principal);
 }
 
 /* ==========================================
@@ -79,6 +96,7 @@ section#ficha {
     background-color: var(--fundo-card);
     padding: 15px;
     border-radius: 15px;
+    color: var(--texto);
 }
 
 section#ficha .foto-perfil {
@@ -158,6 +176,7 @@ article#skills {
     padding: 15px;
     padding-bottom: 5px;
     border-radius: 15px;
+    color: var(--texto);
 }
 
 article#skills h2 {
@@ -196,6 +215,7 @@ article#formacao {
     margin-top: 15px;
     padding: 15px;
     border-radius: 15px;
+    color: var(--texto);
 }
 
 article#formacao div.formacao-contaner {
@@ -212,7 +232,7 @@ article#formacao div.curso {
     background-color: var(--fundo-principal);
     border-radius: 10px;
     padding: 10px;
-    border-left: 4px solid var(--destaque);
+    border-left: 5px solid var(--destaque);
 
     transition: border-width .15s, border-color .15s;
 }
@@ -239,6 +259,7 @@ article#projetos div#container-projeto {
     display: flex;
     flex-direction: column-reverse;
     gap: 15px;
+    color: var(--texto);
 
 }
 article#projetos .foto {
@@ -274,11 +295,11 @@ article#projetos div.projeto {
 }
 
 article#projetos div.projeto:hover {
-    padding-left: 5px;
     border-left-width: 15px;
     border-left-color: var(--destaque);
+    margin-bottom: 5px;
 
-    transition: border-left-width .3s ease, border-left-color .3s ease, padding-left .3s ease;
+    transition: border-left-width .3s ease, border-left-color .3s ease, margin-bottom.3s ease;
 }
 
 /* ==========================================
@@ -313,5 +334,7 @@ footer {
    ========================================== */
 
 @media screen and (min-width: 768px){
-    
+    main {
+        grid-template-columns: auto 300px 1fr;
+    }
 }
