@@ -234,6 +234,13 @@ article#formacao h3.titulacao {
    SEÇÃO PROJETOS
    ========================================== */
 
+
+article#projetos div#container-projeto {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+
+}
 article#projetos .foto {
     width: 100%;
     aspect-ratio: 16/9;
@@ -249,13 +256,6 @@ article#projetos .foto {
 article#projetos .foto:hover {
     filter: brightness(0.9);
     opacity: 0.9;
-}
-
-article#projetos div#container-projeto {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 15px;
-
 }
 
 article#projetos {
