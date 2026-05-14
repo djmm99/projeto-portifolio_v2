@@ -41,10 +41,9 @@ body.escuro {
     --destaque-inverso: #fd4949;
 }
 
-main {
-    margin: 15px;
+article{
+    margin-bottom: 20px;
 }
-
 /* ==========================================
             HEADER & MENU
    ========================================== */
@@ -92,11 +91,19 @@ nav#menu a:hover {
             SEÇÃO FICHA (PERFIL)
    ========================================== */
 
+main {
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+    gap: 20px;
+}
+
 section#ficha {
     background-color: var(--fundo-card);
     padding: 15px;
     border-radius: 15px;
     color: var(--texto);
+    grid-column: 2;
+    margin-top: 20px;
 }
 
 section#ficha .foto-perfil {
@@ -138,7 +145,9 @@ section#ficha div#social a:hover {
 /* ==========================================
              SEÇÃO VÍDEO
    ========================================== */
-
+section#detalhes {
+    grid-column: 2;
+}
 
 article#vidio {
     background-color: var(--fundo-card);
@@ -149,7 +158,6 @@ article#vidio {
 
  h2 {
     color: var(--destaque);
-    margin-bottom: 15px;
 }
 
 div.vidio-container {
@@ -335,6 +343,19 @@ footer {
 
 @media screen and (min-width: 768px){
     main {
-        grid-template-columns: auto 300px 1fr;
+        grid-template-columns: auto 350px 1fr auto;
+
+    }
+
+    section#ficha {
+        grid-column: 2/3;
+        height: fit-content;
+        position: sticky;
+        top: 85px;
+        padding: 30px 20px;
+    }
+    
+    section#detalhes {
+        grid-column: 3/4;
     }
 }
