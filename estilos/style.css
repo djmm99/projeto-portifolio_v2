@@ -44,6 +44,11 @@ body.escuro {
 article{
     margin-bottom: 20px;
 }
+
+h2 {
+    color: var(--destaque);
+    margin-bottom: 15px;
+}
 /* ==========================================
             HEADER & MENU
    ========================================== */
@@ -156,10 +161,6 @@ article#vidio {
     border-radius: 15px;
 }
 
- h2 {
-    color: var(--destaque);
-}
-
 div.vidio-container {
     position: relative;
     width: 100%;
@@ -185,10 +186,6 @@ article#skills {
     padding-bottom: 5px;
     border-radius: 15px;
     color: var(--texto);
-}
-
-article#skills h2 {
-    color: var(--destaque);
 }
 
 article#skills div.info {
@@ -230,10 +227,6 @@ article#formacao div.formacao-contaner {
     display: flex;
     flex-direction: column-reverse;
     gap: 15px;
-}
-
-article#formacao h2 {
-    color: var(--destaque);
 }
 
 article#formacao div.curso {
@@ -356,6 +349,38 @@ footer {
     }
     
     section#detalhes {
+        margin-top: 8px;
         grid-column: 3/4;
     }
+
+    article#skills div#container-skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    div#container-projeto {
+        display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    }
+
+    div#container-projeto .projeto {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    div#container-projeto .projeto-info {
+        margin-top: 10px;
+        margin-left: 10px;
+        max-width: 60%;
+    }
+
+    div#container-projeto .foto {
+        aspect-ratio: 16/9;
+        max-height: 300px;
+    }
+
+
 }
